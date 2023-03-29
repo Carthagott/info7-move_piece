@@ -35,7 +35,15 @@ void start(int tab[huit][huit], piece joueur1[seize],piece joueur2[seize])
 
     }
 }
+void get_square()
+{
 
+
+}
+void set_square()
+{
+
+}
 void move_piece(int tab[huit][huit])
 {// fonction pour bouger une piece quelconque a une case quelconque avec seul verification que la case existe
 
@@ -67,14 +75,14 @@ if(lettre<75)
 {
     lettre=lettre-65;
 }
-else()
+else
 {
-    lettre=lettre-97
+    lettre=lettre-97;
 }
 
 /////////////////////////////////////////////////////////////////////////////////// partie a suivre, repeter l etape precedente pour la case d atterissage et verifier si elle est bien vide
-cout<<"Ou souhaitez vous placer cette piece ? "
-cin>>poser
+cout<<"Ou souhaitez vous placer cette piece ? ";
+cin>>poser;
 lettrebis=poser[0];
 numerobis=poser[1]-49;
 while (!((lettrebis>64 && lettrebis<73)||(lettrebis>96 && lettrebis<105)))
@@ -94,13 +102,15 @@ if(lettrebis<75)
 {
     lettrebis=lettrebis-65;
 }
-else()
+else
 {
-    lettrebis=lettrebis-97
+    lettrebis=lettrebis-97;
 }
 
+//// nouvelle emplacement
 
-
+tab[lettrebis][numerobis]=tab[lettre][numero];
+tab[lettre][numero]=0;
 }
 int main()
  {int tab[huit][huit];
